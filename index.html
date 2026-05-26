@@ -41,10 +41,10 @@
             📷 Video
         </a>
     </div>
-    <!--teaser video-->
+    <!--teaser + explainer video-->
     <section class="video-wide">
-        <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/videos/teaser.mp4" type="video/mp4">
+        <video controls loop muted playsinline preload="metadata">
+            <source src="assets/videos/combined.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
@@ -57,6 +57,15 @@
         </video>
     </section>
 
+    <!--TLDR-->
+    <section class="AeroLANCE-design" id="tldr">
+        <h2>TLDR</h2>
+        <p>
+            Aerial Low-Altitude Navigation in Complex Environments (AeroLANCE) is a training-free navigation framework for vision-language navigation (VLN) with drones. AeroLANCE splits the VLN task into two separate components -- Trajectory Planning which derives a safe UAV trajectory through 3D spatial computation and Target Recognition which performs semantic processing of instruction and camera images with vision-language models. By employing scene-agnostic algorithms for trajectory planning  and zero-shot VLMs for target recognition, AeroLANCE generalizes across various types of outdoor and indoor environments. AeroLANCE build a dense 3D occupancy map of the environment in real time and uses it for spatial reasoning. Additionally, it takes proactive and reactive safety measures to avoid collision in complex environments. AeroLANCE tracks potential target instances, looks for key surrounding objects and evaluates a location combining visual and spatial information.
+            <!-- Existing Aerial VLN methods saves observation history in unstructured text, image tokens or sparse 3D information. In contrast, AeroLANCE builds a dense 3D map of the environment in real time and uses it for spatial reasoning.-->
+        </p>
+    </section>
+
     <!--gallery-->
     <section id="gallery">
         <h2>Video Gallery</h2>
@@ -66,22 +75,42 @@
                 <div class="carousel-track" id="carouselTrack">
                     <div class="carousel-slide active">
                         <video loop muted playsinline preload="metadata" controls>
-                            <source src="assets/gallery/newyork1.mp4" type="video/mp4">
+                            <source src="assets/new_gallery/nyc_megapack.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-slide next">
                         <video loop muted playsinline preload="metadata" controls>
-                            <source src="assets/gallery/newyork2.mp4" type="video/mp4">
+                            <source src="assets/new_gallery/new_york_city.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-slide">
                         <video loop muted playsinline preload="metadata" controls>
-                            <source src="assets/gallery/carlatown1.mp4" type="video/mp4">
+                            <source src="assets/new_gallery/modern_city.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-slide">
                         <video loop muted playsinline preload="metadata" controls>
-                            <source src="assets/gallery/carlatown2.mp4" type="video/mp4">
+                            <source src="assets/new_gallery/tropical_island.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video loop muted playsinline preload="metadata" controls>
+                            <source src="assets/new_gallery/carla_town_4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video loop muted playsinline preload="metadata" controls>
+                            <source src="assets/new_gallery/carla_town_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video loop muted playsinline preload="metadata" controls>
+                            <source src="assets/new_gallery/carla_town_5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video loop muted playsinline preload="metadata" controls>
+                            <source src="assets/new_gallery/modular_park.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -93,16 +122,23 @@
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
             <span class="dot" onclick="goToSlide(3)"></span>
+            <span class="dot" onclick="goToSlide(4)"></span>
+            <span class="dot" onclick="goToSlide(5)"></span>
+            <span class="dot" onclick="goToSlide(6)"></span>
+            <span class="dot" onclick="goToSlide(7)"></span>
         </div>
     </section>
 
-    <!--TLDR-->
-    <section class="AeroLANCE-design" id="tldr">
-        <h2>TLDR</h2>
-        <p>
-            Aerial Low-Altitude Navigation in Complex Environments (AeroLANCE) is a training-free navigation framework for vision-language navigation (VLN) with drones. AeroLANCE splits the VLN task into two separate components -- Trajectory Planning which derives a safe UAV trajectory through 3D spatial computation and Target Recognition which performs semantic processing of instruction and camera images with vision-language models. By employing scene-agnostic algorithms for trajectory planning  and zero-shot VLMs for target recognition, AeroLANCE generalizes across various types of outdoor and indoor environments. AeroLANCE build a dense 3D occupancy map of the environment in real time and uses it for spatial reasoning. Additionally, it takes proactive and reactive safety measures to avoid collision in complex environments. AeroLANCE tracks potential target instances, looks for key surrounding objects and evaluates a location combining visual and spatial information.
-            <!-- Existing Aerial VLN methods saves observation history in unstructured text, image tokens or sparse 3D information. In contrast, AeroLANCE builds a dense 3D map of the environment in real time and uses it for spatial reasoning.-->
-        </p>
+    <!--OpenUAV VLN Task-->
+    <section id="method">
+        <h2>OpenUAV VLN Tasks</h2>
+        <div class="video-wide">
+            <video muted playsinline preload="metadata" controls>
+                <source src="assets/videos/traj_3d_cam_occup_bff9a.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p></p>
     </section>
 
     <!--Explainer Video-->
@@ -141,7 +177,7 @@
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 4;
+        const totalSlides = 8;
 
         function moveCarousel(dir) {
             currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
