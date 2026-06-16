@@ -47,6 +47,12 @@ h1{
     text-decoration: none;
     display: inline-block;
 }
+.affilations span{
+    display: block;
+}
+.university{
+    font-size: 24px;
+}
 
 .btn{
     display: inline-block;
