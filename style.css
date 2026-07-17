@@ -97,6 +97,33 @@ section{
     font-size: 18px;
 }
 
+#tldr .summary-tldr{
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e3a5f;
+    font-family: 'Inter', var(--text-font);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+#tldr .contribution-heading{
+    margin-top: 18px;
+}
+
+#tldr .contribution-list{
+    text-align: left;
+    font-size: 18px;
+    margin: 8px 0 0 28px;
+}
+
+#tldr .contribution-list li{
+    margin-bottom: 8px;
+}
+
 .design_video{
     width: 100%;
     max-width: 1000px;

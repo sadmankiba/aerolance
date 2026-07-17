@@ -52,19 +52,27 @@
 
     <!--design/abstract-->
     <section class="AeroLANCE-design" id="abstract">
-        <h2>AeroLANCE Pipeline</h2>
+        <h2>AeroLANCE Design</h2>
         <video autoplay muted playsinline class="design_video">
             <source src="assets/videos/AeroLANCE_design.mp4" type="video/mp4">
         </video>
     </section>
 
-    <!--TLDR-->
+    <!--Summary-->
     <section class="AeroLANCE-design" id="tldr">
-        <h2>TLDR</h2>
-        <p>
-            Aerial Low-Altitude Navigation in Complex Environments (AeroLANCE) is a training-free navigation framework for vision-language navigation (VLN) with drones. AeroLANCE splits the VLN task into two separate components -- Trajectory Planning which derives a safe UAV trajectory through 3D spatial computation and Target Recognition which performs semantic processing of instruction and camera images with vision-language models. By employing scene-agnostic algorithms for trajectory planning  and zero-shot VLMs for target recognition, AeroLANCE generalizes across various types of outdoor and indoor environments. AeroLANCE build a dense 3D occupancy map of the environment in real time and uses it for spatial reasoning. Additionally, it takes proactive and reactive safety measures to avoid collision in complex environments. AeroLANCE tracks potential target instances, looks for key surrounding objects and evaluates a location combining visual and spatial information.
-            <!-- Existing Aerial VLN methods saves observation history in unstructured text, image tokens or sparse 3D information. In contrast, AeroLANCE builds a dense 3D map of the environment in real time and uses it for spatial reasoning.-->
+        <h2>Summary</h2>
+        <p class="summary-tldr">
+            <strong>TL;DR</strong>: AeroLANCE decouples spatial navigation from semantic grounding for training-free aerial VLN.
         </p>
+        <p>
+            <strong>Aerial</strong> <strong>L</strong>ow-<strong>A</strong>ltitude <strong>N</strong>avigation in <strong>C</strong>omplex <strong>E</strong>nvironments (<strong>AeroLANCE</strong>) is a training-free framework for aerial vision-language navigation (VLN) that separates geometric navigation from semantic grounding. Rather than asking a single model to learn language understanding, visual recognition, mapping, and collision avoidance jointly, AeroLANCE employs two separate components -- one for structure-aware navigation and another for semantic processing. The structure-aware navigation component handles 3D mapping, path planning, and safety with classical spatial algorithms, while the semantic processing component uses pretrained foundation models to parse instructions, detect objects, and verify target instances. This decoupled design allows AeroLANCE to generalize across various environments without task-specific navigation training and transfer to real-world DJI Tello flights.
+        </p>
+        <p class="contribution-heading"><strong>Contributions:</strong></p>
+        <ul class="contribution-list">
+            <li>Decoupled aerial VLN architecture separating geometric navigation from semantic grounding.</li>
+            <li>Omnidirectional safety with proactive search, reactive avoidance, and dynamic altitude control.</li>
+            <li>Instance-level target recognition using surrounding-object layout and multimodal scoring.</li>
+        </ul>
     </section>
 
     <!--gallery-->
@@ -130,17 +138,6 @@
         </div>
     </section>
 
-    <!--OpenUAV VLN Task
-    <section id="method">
-        <h2>OpenUAV VLN Tasks</h2>
-        <div class="video-wide">
-            <video muted playsinline preload="metadata" controls>
-                <source src="assets/videos/traj_3d_cam_occup_bff9a.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <p></p>
-    </section>
     <!--Explainer Video-->
     <!--
     <section id="explainer">
