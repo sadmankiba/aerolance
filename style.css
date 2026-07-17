@@ -131,6 +131,12 @@ section{
     object-fit: cover;
 }
 
+.design_image{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
 .carousel-container {
     position: relative;
     display: flex;
