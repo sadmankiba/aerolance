@@ -85,6 +85,7 @@ h2{
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 30px 0 40px 0;
+    overflow: hidden;
 }
 
 section{
@@ -122,6 +123,47 @@ section{
 
 #tldr .contribution-list li{
     margin-bottom: 8px;
+}
+
+#methods{
+    padding: 20px 0 70px;
+}
+
+.methods-composite{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.methods-figure{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.methods-mobile-grid{
+    display: none;
+}
+
+.methods-description{
+    max-width: 980px;
+    margin: 24px auto 0;
+    color: #3e4c57;
+    font-family: 'Inter', var(--text-font);
+    font-size: 18px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.methods-description strong{
+    color: #172f3f;
+}
+
+.methods-description code{
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: #eef2f5;
+    color: #7257c8;
+    font-size: 0.92em;
 }
 
 .design_video{
@@ -208,8 +250,8 @@ section{
     transition: background 0.2s, transform 0.15s ease;
 }
 
-.prev-btn { left: calc(50% - 550px); }
-.next-btn { right: calc(50% - 550px); }
+.prev-btn { left: max(12px, calc(50% - 550px)); }
+.next-btn { right: max(12px, calc(50% - 550px)); }
 
 .carousel-btn:hover {
     background: #1a1a1a;
@@ -264,4 +306,63 @@ section{
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 700px) {
+    body{
+        padding: 36px 18px;
+    }
+
+    h1{
+        font-size: 31px;
+        line-height: 1.2;
+    }
+
+    .authors,
+    .university{
+        font-size: 19px;
+    }
+
+    #methods{
+        padding-bottom: 54px;
+    }
+
+    .methods-composite{
+        display: none;
+    }
+
+    .methods-mobile-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .methods-mobile-grid img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .methods-description{
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-track-wrapper{
+        width: 70%;
+    }
+
+    .prev-btn{
+        left: 12px;
+    }
+
+    .next-btn{
+        right: 12px;
+    }
 }

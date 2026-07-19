@@ -78,6 +78,28 @@
         </ul>
     </section>
 
+    <!--Key Methods-->
+    <section id="methods" class="key-methods">
+        <h2>Key Methods</h2>
+        <div class="methods-composite">
+            <img
+                class="methods-figure"
+                src="assets/images/AeroLANCE-Key-Methods.svg"
+                alt="Four diagrams showing 3D occupancy and A-star planning, proactive and reactive safety, dynamic altitude control, and target recognition"
+                loading="lazy"
+            >
+        </div>
+        <div class="methods-mobile-grid" aria-label="AeroLANCE key methods diagrams">
+            <img src="assets/images/AeroLANCE-Method-1-Planning.svg" alt="3D occupancy map and A-star waypoint planning" loading="lazy">
+            <img src="assets/images/AeroLANCE-Method-2-Safety.svg" alt="Proactive clear-volume search and reactive obstacle avoidance" loading="lazy">
+            <img src="assets/images/AeroLANCE-Method-3-Altitude.svg" alt="Dynamic altitude control responding to safety corrections" loading="lazy">
+            <img src="assets/images/AeroLANCE-Method-4-Recognition.svg" alt="Target detection, contextual scoring, approach, and STOP gate" loading="lazy">
+        </div>
+        <p class="methods-description">
+            <strong>Occupancy-aware planning</strong> builds a live 3D map and uses A* search to select short, obstacle-aware waypoint paths. <strong>Omnidirectional safety</strong> first searches for a clear movement volume, then combines repulsive, attractive, and evasion vectors to preserve clearance near obstacles. <strong>Dynamic altitude control</strong> raises the desired flight height when safety corrections grow and lowers it during steady progress to recover ground visibility. When SAM3 finds a candidate, <strong>target recognition</strong> enters <code>get_closer</code>, gathers surrounding-object context for MLLM scoring, and triggers STOP only when both confidence and proximity conditions are met.
+        </p>
+    </section>
+
     <!--gallery-->
     <section id="gallery">
         <h2>Video Gallery</h2>
