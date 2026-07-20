@@ -100,6 +100,27 @@
         </p>
     </section>
 
+    <!--Evaluation Results-->
+    <section id="results" class="evaluation-results">
+        <h2>Evaluation Results</h2>
+        <div class="results-composite">
+            <img
+                class="results-figure"
+                src="assets/images/AeroLANCE-Evaluation-Results.svg"
+                alt="OpenUAV success rate bar charts and navigation error versus SPL plots for Test Seen, Unseen Object, and Unseen Map"
+                loading="lazy"
+            >
+        </div>
+        <div class="results-mobile-grid" aria-label="OpenUAV evaluation results by split">
+            <img src="assets/images/AeroLANCE-Results-Test-Seen.svg" alt="Test Seen success rate and navigation efficiency results" loading="lazy">
+            <img src="assets/images/AeroLANCE-Results-Unseen-Object.svg" alt="Unseen Object success rate and navigation efficiency results" loading="lazy">
+            <img src="assets/images/AeroLANCE-Results-Unseen-Map.svg" alt="Unseen Map success rate and navigation efficiency results" loading="lazy">
+        </div>
+        <p class="results-description">
+            <strong>AeroLANCE leads all three OpenUAV splits</strong> in success rate and Success weighted by Path Length (SPL), while producing the lowest navigation error. Its generalization advantage is most pronounced on Unseen Map, where it reaches <strong>56.8% success</strong> with <strong>28.0 m navigation error</strong>, compared with the strongest baseline at 11.3% success and 108.3 m error. The upper-left region of each scatter plot is preferred because it combines lower error with more efficient successful trajectories.
+        </p>
+    </section>
+
     <!--gallery-->
     <section id="gallery">
         <h2>Video Gallery</h2>
