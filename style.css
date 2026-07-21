@@ -1,9 +1,11 @@
 html{
     scroll-behavior: smooth;
     background: var(--background-color);
+    overflow-x: hidden;
 }
 :root{
-    --text-font: 'Roboto', sans-serif;
+    --text-font: 'Noto Sans', sans-serif;
+    --display-font: 'Google Sans', 'Noto Sans', sans-serif;
     --background-color: #f7f8f4;
     --button-color: #2d2d2d;
     --button-font-size: 16px;
@@ -21,39 +23,54 @@ body{
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 40px;
-    line-height: 1.6;
+    line-height: 1.5;
     background: var(--background-color);
-    color: #333;
+    color: #4a4a4a;
     text-align: center;
 }
 
 h1{
-    margin-bottom: 30px;
-    font-size: 44px;
+    max-width: 1020px;
+    margin: 0 auto 24px;
+    color: #363636;
+    font-family: var(--display-font);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.125;
 }
 .authors{
-    margin-bottom: 10px;
-    font-size: 24px;
+    margin: 0 auto 10px;
+    font-family: var(--display-font);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
 }
 .authors a{
-    text-decoration: underline;
-    text-decoration-color: blue;
-    color: blue;
+    color: #3273dc;
+    text-decoration: none;
 }
 .authors a:hover{
     text-decoration: underline;
 }
 .authors sup{
     font-size: 13px;
-    color: blue;
+    color: #3273dc;
     text-decoration: none;
     display: inline-block;
 }
 .affilations span{
     display: block;
 }
+.affilations{
+    color: #555;
+    font-family: var(--display-font);
+    line-height: 1.45;
+}
+.equal-advising{
+    font-size: 14px;
+}
 .university{
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .btn{
@@ -65,15 +82,27 @@ h1{
     font-size: var(--button-font-size);
     color: var(--button-font-color);
     cursor: pointer;
-    margin: 20px 0px 50px 0px;
+    margin: 0;
     text-decoration: none;
 }
 .btn:hover{
     background:#1a1a1a;
 }
 
+.btn_links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0 50px;
+}
+
 h2{
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
+    color: #363636;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.125;
 }
 
 .AeroLANCE-design{
@@ -91,13 +120,17 @@ h2{
 }
 
 section{
-    font-size: 26px;
+    font-size: 16px;
     padding: 30px 0px 30px 0px;
 }
 
 .AeroLANCE-design p{
-    text-align: left;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 #tldr .summary-tldr{
@@ -107,10 +140,10 @@ section{
     border-radius: 8px;
     background: #eff6ff;
     color: #1e3a5f;
-    font-family: 'Inter', var(--text-font);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.45;
+    text-align: left;
 }
 
 #tldr .contribution-heading{
@@ -118,9 +151,11 @@ section{
 }
 
 #tldr .contribution-list{
+    max-width: 872px;
     text-align: left;
     font-size: 18px;
-    margin: 8px 0 0 28px;
+    margin: 8px auto 0;
+    padding-left: 28px;
 }
 
 #tldr .contribution-list li{
@@ -147,13 +182,12 @@ section{
 }
 
 .methods-description{
-    max-width: 980px;
+    max-width: 900px;
     margin: 24px auto 0;
     color: #3e4c57;
-    font-family: 'Inter', var(--text-font);
     font-size: 18px;
-    line-height: 1.65;
-    text-align: left;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .methods-description strong{
@@ -188,13 +222,12 @@ section{
 }
 
 .results-description{
-    max-width: 980px;
+    max-width: 900px;
     margin: 24px auto 0;
     color: #3e4c57;
-    font-family: 'Inter', var(--text-font);
     font-size: 18px;
-    line-height: 1.65;
-    text-align: left;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .results-description strong{
@@ -344,7 +377,6 @@ section{
     border-left: 4px solid #377a68;
     background: rgba(255, 255, 255, 0.72);
     color: #2f403b;
-    font-family: 'Inter', var(--text-font);
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
@@ -366,13 +398,25 @@ section{
     }
 
     h1{
-        font-size: 31px;
-        line-height: 1.2;
+        margin-bottom: 20px;
+        font-size: 34px;
+        line-height: 1.15;
     }
 
-    .authors,
+    .authors{
+        font-size: 18px;
+    }
+
     .university{
-        font-size: 19px;
+        font-size: 15px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .AeroLANCE-design p{
+        text-align: left;
     }
 
     #methods{
@@ -400,6 +444,7 @@ section{
         margin-top: 20px;
         font-size: 16px;
         line-height: 1.6;
+        text-align: left;
     }
 
     #results{
@@ -427,6 +472,7 @@ section{
         margin-top: 20px;
         font-size: 16px;
         line-height: 1.6;
+        text-align: left;
     }
 
     .video-grid{
