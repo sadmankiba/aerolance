@@ -1,9 +1,10 @@
 html{
     scroll-behavior: smooth;
+    background: var(--background-color);
 }
 :root{
     --text-font: 'Roboto', sans-serif;
-    --background-color: #fff;
+    --background-color: #f7f8f4;
     --button-color: #2d2d2d;
     --button-font-size: 16px;
     --button-font-color: #fff;
@@ -25,6 +26,7 @@ body{
     color: #333;
     text-align: center;
 }
+
 h1{
     margin-bottom: 30px;
     font-size: 44px;
@@ -81,7 +83,7 @@ h2{
     padding: 20px 0px 10px 0px;
 }
 #gallery{
-    background: #f7f7f7;
+    background: #eef3f0;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 30px 0 40px 0;
@@ -220,7 +222,7 @@ section{
 }
 
 .carousel-track-wrapper {
-    width: 27%;
+    width: 35%;
     margin: 0 auto;
     overflow: visible;
 }
@@ -331,8 +333,25 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    max-width: 900px;
+    max-width: 750px;
     margin: 0 auto;
+}
+
+.experiment-instruction {
+    grid-column: 1 / -1;
+    margin: 2px 0 -6px;
+    padding: 10px 14px;
+    border-left: 4px solid #377a68;
+    background: rgba(255, 255, 255, 0.72);
+    color: #2f403b;
+    font-family: 'Inter', var(--text-font);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.experiment-instruction-secondary {
+    margin-top: 12px;
 }
 
 .video-grid video {
@@ -415,7 +434,7 @@ section{
     }
 
     .carousel-track-wrapper{
-        width: 70%;
+        width: 90%;
     }
 
     .prev-btn{
